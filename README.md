@@ -19,3 +19,20 @@ Using UIHorizontalTable is just like using UItableView
 }
 @end
 ```
+All reset is to implement delegate & datasource methods as UITableView. Here UIHozizontalTableView has its own UIHorizontalTableViewDelegate protocol which is very similar to UITableViewDelegate.
+```objectivec
+- (CGFloat) tableView:(UITableView *)tableView widthForRowAtIndexPath:(NSIndexPath *)indexPath{
+    return desiredWidth;
+}
+- (UITableViewCell*) tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
+    UITableViewCell* cell = [tableView dequeueReusableCellWithIdentifier:@"cell" forIndexPath:indexPath];
+    //Customize your cell
+    return cell;
+}
+- (NSInteger) numberOfSectionsInTableView:(UITableView *)tableView{
+    return sectionNumber;
+}
+- (NSInteger) tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
+    return rowsNumberInSection;
+}
+```
