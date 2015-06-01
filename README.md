@@ -1,6 +1,15 @@
 # UIHorizontalTableView
 A horizontal tableview used as simple as UITableView
 
+# Installation
+
+The simplest way is
+```
+pod 'UIHorizontalTableView', '0.0.1'
+```
+
+You can also add the two files UIHorizontalTableView.h/m.
+
 # Getting Started
 Using UIHorizontalTable is just like using UItableView
 
