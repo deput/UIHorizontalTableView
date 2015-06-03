@@ -8,10 +8,10 @@ The simplest way is
 pod 'UIHorizontalTableView', '0.0.1'
 ```
 
-You can also add the two files UIHorizontalTableView.h/m.
+You can also add the two files UIHorizontalTableView.h/m in your project.
 
 # Getting Started
-Using UIHorizontalTable is just like using UItableView
+UIHorizontalTableView is a subclass of UItableView.Using UIHorizontalTableView is just like using UItableView.
 
 ```objectivec
 @interface ViewController ()<UIHorizontalTableViewDelegate, UITableViewDataSource>
@@ -28,7 +28,7 @@ Using UIHorizontalTable is just like using UItableView
 }
 @end
 ```
-All rest is to implement delegate & datasource methods as UITableView. Here UIHozizontalTableView has its own UIHorizontalTableViewDelegate protocol which is very similar to UITableViewDelegate.
+All rest is to implement delegate & datasource methods as UITableView. Here UIHozizontalTableView has its own UIHorizontalTableViewDelegate protocol which extends protocol UITableViewDelegate. The delegate methods are much alike ones in UITableview.
 ```objectivec
 - (CGFloat) tableView:(UITableView *)tableView widthForRowAtIndexPath:(NSIndexPath *)indexPath{
     return desiredWidth;
